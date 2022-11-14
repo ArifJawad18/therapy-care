@@ -11,22 +11,20 @@ const Header = () => {
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li><a href='/'>Home</a></li>
-        <li><a href='/services'>Services</a></li>
+        <li><a href='/service'>Services</a></li>
         <li><a href='/blog'>Blog</a></li>
       </ul>
     </div>
-    <a href='/' className="normal-case text-xl ml-5 text-blue-500">Therapy Care</a>
+    <a href='/' className="normal-case text-xl ml-5 text-blue-600">Therapy Care</a>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div className="navbar hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
       <li><a href='/'>Home</a></li>
-      <li><a href='/services'>Services</a></li>
+      <li><a href='/service'>Service</a></li>
       <li><a href='/blog'>Blog</a></li>
+      <li><a href='/login'>Login</a></li>
+      <li><a href='/register'>Register</a></li>
     </ul>
-  </div>
-  <div className="navbar-end">
-  <button type="button" className="flex items-center justify-center p-3 mr-5 font-semibold tracking-wide rounded-md bg-blue-600 text-gray-50">Login</button>
-  <button type="button" className="flex items-center justify-center p-3 font-semibold tracking-wide rounded-md bg-blue-600 text-gray-50">Register</button>
   </div>
 </div>
     );

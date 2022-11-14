@@ -7,7 +7,6 @@ const Login = () => {
     }
     return (
         <div>
-          <div className="">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
     </div>
@@ -18,13 +17,13 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="text" placeholder="email" className="input input-bordered" />
+          <input type="text" name='email' placeholder="email" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="text" placeholder="password" className="input input-bordered" />
+          <input type="text" name='password' placeholder="password" className="input input-bordered" />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
@@ -47,14 +46,12 @@ const Login = () => {
 		
 	</div>
 	<p className="text-xs text-center sm:px-6 text-gray-600">Don't have an account?
-		<a rel="noopener noreferrer" href="#" className="underline text-gray-800">Register</a>
+		<a rel="noopener noreferrer" href="/register" className="underline text-gray-800">Register</a>
 	</p>
 </form>
       </div>
     </div>
   </div>
-  
-</div>
     );
 };
 
