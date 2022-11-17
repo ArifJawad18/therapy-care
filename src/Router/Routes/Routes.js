@@ -34,10 +34,6 @@ const router = createBrowserRouter([
           element:<Service></Service>
         },
         {
-          path:'/register',
-          element:<Register></Register>
-        },
-        {
           path:'*',
           element:<div className="text-center text-red-500">Sorry, we couldn't find this page.</div>
         },

@@ -5,13 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey,
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId:process.env.REACT_APP_messagingSenderId, 
-  appId: process.env.REACT_APP_appId,
+  apiKey: "AIzaSyDCU6mbjgxv9RYURVjhJBsB6rtGrFPdvqE",
+  authDomain: "therapy-care-4913b.firebaseapp.com",
+  projectId: "therapy-care-4913b",
+  storageBucket: "therapy-care-4913b.appspot.com",
+  messagingSenderId: "591482121108",
+  appId: "1:591482121108:web:84535d6d8360098db5bd81"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export default app;

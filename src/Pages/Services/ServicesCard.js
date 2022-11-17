@@ -13,8 +13,7 @@ const ServicesCard = ({service}) => {
 			<p className="text-gray-800">{description}.</p>
 		</div>
 		<button type="button"  className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-blue-600 text-gray-50" >
-		<a href='/service'>Read more</a></button>
-		
+		<a href='/'>Read more</a></button>
 	</div>
 </div>
         </div>

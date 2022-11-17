@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Service = () => {
+const ServiceCard = () => {
     return (
         <div>
-            <h1>this service</h1>
+            
         </div>
     );
 };
 
-export default Service;
+export default ServiceCard;
