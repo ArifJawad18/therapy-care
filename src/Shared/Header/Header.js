@@ -41,8 +41,8 @@ const Header = () => {
         </>
         :
         <>
-          <li><a href='/login'>Login</a></li>
-          <li><a href='/register'>Register</a></li>
+          <button><a href='/login'>Login</a></button>
+          <button><a href='/register'>Register</a></button>
 
         </>
         }
@@ -50,8 +50,6 @@ const Header = () => {
 
     </ul>
   </div>
-
-
  
 </div>
     );
