@@ -11,13 +11,13 @@ const Home = () => {
             <Services></Services>
 
          <div className=' mt-4 mb-4 flex justify-center'>
-         <button type="button" className="px-8 py-3 font-semibold rounded-full bg-red-400 text-gray-100"> <a href='/service'>SEE ALL SERVICES</a></button>
+         <button type="button" className="px-8 py-3 font-semibold rounded-full bg-red-400 text-gray-100"> <a href='/Servicedetails'>SEE ALL SERVICES</a></button>
          </div>
 		 <div>
 		 <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
 			<img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" className="h-80 bg-gray-500 aspect-video" />
 			<div className="flex flex-col justify-center flex-1 p-6 bg-gray-50">
-				<h3 className="text-3xl font-bold">Why You choose his services</h3>
+				<h3 className="text-3xl font-bold">Why You choose her services</h3>
 				<p className="my-6 text-gray-600">Eliminating or reducing pain. ... Helps in avoiding surgery. ... Improving overall strength and coordination. ...Reducing the dependency on medicines. ... Boosting cardiovascular functioning and lung capacity. ... Managing and preventing sports related injuries. ... Staying fit at all ages and phases</p>
 			</div>
 		</div>

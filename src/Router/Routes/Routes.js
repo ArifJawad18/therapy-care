@@ -6,7 +6,9 @@ import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Orders from "../../Pages/Orders/Orders";
 import Register from "../../Pages/Register/Register";
-import Service from "../../Pages/Service/Service";
+import Servicedetails from "../../Pages/Servicedtls/Servicedetails";
+
+
 
 
 
@@ -31,10 +33,7 @@ const router = createBrowserRouter([
           path:'/register',
           element:<Register></Register>
         },
-        {
-          path:'/service',
-          element:<Service></Service>
-        },
+      
         {
           path:'/checkout/:id',
           loader: () => fetch('/services.json'),
@@ -44,6 +43,11 @@ const router = createBrowserRouter([
           path:'/orders',
           element:<Orders></Orders>
         },
+        {
+          path:'/Servicedetails',
+          element:<Servicedetails></Servicedetails>
+        },
+      
         {
           path:'*',
           element:<div className="text-center text-red-500">Sorry, we couldn't find this page.</div>
