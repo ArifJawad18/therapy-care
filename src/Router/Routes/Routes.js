@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       
         {
           path:'/checkout/:id',
-          loader: () => fetch('/services.json'),
+          loader: () => fetch(''),
           element:<Checkout></Checkout>,
         },
         {

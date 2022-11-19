@@ -7,10 +7,10 @@ const OrderRow = ({orders}) => {
     const [orderService, setOrdersService] =useState({})
 
     useEffect(() =>{
-        fetch('/services.json/${service}')
+        fetch('/}')
         .then(res => res.json())
         .then(data => setOrdersService(data))
-    }, [service])
+    }, [])
     return (
         <div className="overflow-x-auto w-full">
         <table className="table w-full">

@@ -8,7 +8,7 @@ const Orders = () => {
 
 
     useState(() =>{
-        fetch('services.json')
+        fetch('')
         .then(res => res.json())
         .then(data =>setOrders(data))
         
@@ -17,10 +17,10 @@ const Orders = () => {
 
     return (
         <div>
-            <h2 className='text-5xl'>You have {orders.length} orders</h2>
+            <h2 className='text-5xl'>{orders.length}</h2>
             
             <div className="overflow-x-auto w-full">
-  <table className="table w-full">
+            <table className="table w-full">
 
     <thead>
       <tr>

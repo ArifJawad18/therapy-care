@@ -12,7 +12,8 @@ const ServicesCard = ({service}) => {
             <p className='text-blue-500 font-semibold'>Price: ${price}</p>
 			<p className="text-gray-800">{description}.</p>
 		</div>
-		<button type="button" className="px-8 py-3 font-semibold rounded-full bg-blue-500 text-gray-100"> <a href={`/checkout/${_id}`}>See More</a></button>
+		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-full bg-blue-600 text-gray-50"> <a href={`/checkout/${_id}`}>See More</a></button>
+		
 		
 	</div>
 </div>
