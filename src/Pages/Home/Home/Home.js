@@ -58,7 +58,6 @@ const Home = () => {
 							<span>Improving overall strength and coordination</span>
 						</li>
 					</ul>
-					<button type="button" className="inline-block px-5 py-3 font-semibold tracking-wider text-center rounded bg-blue-600 text-gray-50">Get Started</button>
 				</div>
 			</div>
 			<div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
@@ -94,7 +93,6 @@ const Home = () => {
 							<span>Improving overall strength and coordination</span>
 						</li>
 					</ul>
-					<a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded bg-gray-100 text-blue-600">Get Started</a>
 				</div>
 			</div>
 			<div className="w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
@@ -136,15 +134,12 @@ const Home = () => {
 							<span>Boosting cardiovascular functioning and lung</span>
 						</li>
 					</ul>
-					<a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center rounded bg-blue-600 text-gray-50">Get Started</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
          </div>
-          
-           
         </div>
     );
 };

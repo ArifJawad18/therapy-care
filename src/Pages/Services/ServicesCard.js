@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ServicesCard = ({service}) => {
-    const {img, price, title,description} = service;
+    const {_id,img, price, title,description} = service;
     return (
         <div>
         <div className="max-w-xs rounded-md shadow-md bg-gray-50 text-gray-800">
@@ -12,8 +12,10 @@ const ServicesCard = ({service}) => {
             <p className='text-blue-500 font-semibold'>Price: ${price}</p>
 			<p className="text-gray-800">{description}.</p>
 		</div>
-		<button type="button"  className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-blue-600 text-gray-50" >
-		<a href='/'>Read more</a></button>
+		<button type="button" className="px-8 py-3 font-semibold rounded-full bg-blue-500 text-gray-100"> <a href={`/checkout/${_id}`}>SEE MORE</a></button>
+		
+		
+		
 	</div>
 </div>
         </div>
