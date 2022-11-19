@@ -14,8 +14,6 @@ const ServicesCard = ({service}) => {
 		</div>
 		<button type="button" className="px-8 py-3 font-semibold rounded-full bg-blue-500 text-gray-100"> <a href={`/checkout/${_id}`}>SEE MORE</a></button>
 		
-		
-		
 	</div>
 </div>
         </div>

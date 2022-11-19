@@ -13,15 +13,32 @@ const Checkout = () => {
         const email = user?.email || 'unregistered';
         const message = form.message.value;
 
-        const order =  {
+        const Orders =  {
             service:_id,
             serviceName: title,
             email,
             message
 
         }
-        
-    }
+		
+		fetch('http://localhost:5000/orders', {
+			method: 'POST',
+			headers:{
+				'content-type': ''
+			},
+			body: JSON.stringify(Orders)
+		})
+		.then(res => res.json())
+		.then(data =>  {
+			console.log(data)
+			if(data.acknowledged){
+				alert('Order successfully')
+				form.reset();
+			}
+		})
+
+		}
+
 	return (
 		<div>
             <h1>{title}</h1>
@@ -36,7 +53,7 @@ const Checkout = () => {
 			<label for="message" className="block mb-1 ml-1">How was your experience?</label>
 			<textarea name="" id="message" type="text" placeholder="Your experience..." className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-blue-600 bg-gray-100"></textarea>
 		</div>
-			<button type="submit" value="Place Your Order" className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ring-opacity-50 bg-blue-600 focus:ring-blue-600 hover:ring-blue-600 text-gray-50">Place Your Order</button>
+			<button type="submit" value="Place Your Order" className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ring-opacity-50 bg-blue-600 focus:ring-blue-600 hover:ring-blue-600 text-gray-50">Submit</button>
 	
 	</form>
 </section>

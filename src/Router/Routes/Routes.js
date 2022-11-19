@@ -4,6 +4,7 @@ import Blog from "../../Pages/Blog/Blog";
 import Checkout from "../../Pages/Checkout/Checkout";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
+import Orders from "../../Pages/Orders/Orders";
 import Register from "../../Pages/Register/Register";
 import Service from "../../Pages/Service/Service";
 
@@ -36,8 +37,12 @@ const router = createBrowserRouter([
         },
         {
           path:'/checkout/:id',
-          loader: () => fetch('services.json'),
+          loader: () => fetch('/services.json'),
           element:<Checkout></Checkout>,
+        },
+        {
+          path:'/orders',
+          element:<Orders></Orders>
         },
         {
           path:'*',
