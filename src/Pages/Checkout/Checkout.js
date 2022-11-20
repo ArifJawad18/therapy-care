@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { FaStar } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
@@ -47,6 +48,10 @@ const Checkout = () => {
 			<div className="flex flex-col justify-center flex-1 p-6 bg-gray-50">
 				<h2 className="text-3xl font-bold">Hand Therapy</h2>
 				<p className='text-blue-500 font-bold'>Price: $100</p>
+			
+				<FaStar className='text-blue-500'></FaStar><p className='text-blue-500'>4.5</p>
+				
+				
 				<p className="my-6 text-gray-600">Manage and reduce joint pain. Increase range of motion, function, dexterity, and strength. Desensitize nerves following injury or trauma. Provide education and training to adapt to daily activities and responsibilities.</p>
 			</div>
 		</div>
@@ -64,9 +69,14 @@ const Checkout = () => {
 			<textarea name="" id="message" type="text" placeholder="Your feedback.." className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-blue-600 bg-gray-100"></textarea>
 		</div>
 			<button type="submit" value="Place Your Order" className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ring-opacity-50 bg-blue-600 focus:ring-blue-600 hover:ring-blue-600 text-gray-50">Submit</button>
+			<div>
+			<button className=' btn  text-white-500'><a href='/login'>Login </a></button>
+			</div>
 	
 	</form>
 </section>
+
+
 		</div>
 	);
 };

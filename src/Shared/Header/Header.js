@@ -23,6 +23,24 @@ const Header = () => {
         <li><a href='/'>Home</a></li>
         <li><a href='/servicedetails'>Services Details</a></li>
         <li><a href='/blog'>Blog</a></li>
+        <li>
+        {
+        user?.email ?
+        <>
+          <span>{user?.displayName}</span>
+          <button onClick={handleLogOut}>Logout</button>
+          <button><a href='/orders'>Orders</a></button>
+
+        </>
+        :
+        <>
+          
+          <button><a href='/login'>Login</a></button>
+          <button><a href='/register'>Register</a></button>
+
+        </>
+        }
+        </li>
       </ul>
     </div>
     <a href='/' className="normal-case text-xl ml-5 text-blue-600">Therapy Care</a>
