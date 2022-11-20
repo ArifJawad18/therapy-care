@@ -34,13 +34,16 @@ const Header = () => {
       <li><a href='/blog'>Blog</a></li>
       <li>
         {
-        user ?
+        user?.email ?
         <>
           <span>{user?.displayName}</span>
           <button onClick={handleLogOut}>Logout</button>
+          <button><a href='/orders'>Orders</a></button>
+
         </>
         :
         <>
+          
           <button><a href='/login'>Login</a></button>
           <button><a href='/register'>Register</a></button>
 
