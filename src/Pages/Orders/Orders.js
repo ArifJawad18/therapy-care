@@ -8,19 +8,16 @@ const Orders = () => {
 
 
     useState(() =>{
-        fetch('')
+        fetch(`http:/localhost:5000/services`)
         .then(res => res.json())
         .then(data =>setOrders(data))
         
     }, [user?.email])
 
-
     return (
         <div>
-            <h2 className='text-5xl'>{orders.length}</h2>
-            
-            <div className="overflow-x-auto w-full">
-            <table className="table w-full">
+       <div className="overflow-x-auto w-full">
+  <table className="table w-full">
 
     <thead>
       <tr>
@@ -30,23 +27,45 @@ const Orders = () => {
           </label>
         </th>
         <th>ServiceName</th>
+        <th>Price</th>
         <th>Email</th>
-        <th>price</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
-        {/* {
-            orders.map(orders => <OrderRow
-            key={orders._id}
-            order={orders}
-            ></OrderRow>)
-        } */}
-    </tbody>
+      {/* {
+        orders.map(order => <OrderRow
+        key={order._id}
+        order={order}
+        ></OrderRow>)    
+       } */}
     
+      <tr>
+        <th>
+          <label>
+            <button className='btn btn-ghost'>X</button>
+          </label>
+        </th>
+        <td>
+          <div className="flex items-center space-x-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div>
+              <div className="font-bold"></div>
+              <div className="text-sm opacity-50"></div>
+            </div>
+          </div>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
-        </div>
+</div>
     );
 };
 

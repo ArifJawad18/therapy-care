@@ -154,5 +154,31 @@
         "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
       }
     ]
+  },
+  {
+    "_id": "635b5ba51dafe382a9da8c9a",
+    "service_id": "09",
+    "title": "Head Therapy",
+    "img": "https://www.fresver.com.sg/wp-content/uploads/2020/10/HeadTherapyBanner.png",
+    "price": "600",
+    "description": "I have added head therapy now happy. right i can add any service you can give any service to add",
+    "facility": [
+      {
+        "name": "Instant Car Services",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "24/7 Quality Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Easy Customer Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Quality Cost Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      }
+    ]
   }
 ]

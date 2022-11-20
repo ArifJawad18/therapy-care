@@ -8,6 +8,7 @@ const auth = getAuth(app)
 
 const AuthProvider = ({children}) => {
     const  [user, setUser] = useState(null)
+    const [loading, setLoading] =useState(true)
 
     const providerLogin = (provider) =>{
         return signInWithPopup(auth, provider);
@@ -15,10 +16,12 @@ const AuthProvider = ({children}) => {
     }
 
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const signIn = (email, password) =>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password);
     }
 
@@ -29,7 +32,8 @@ const AuthProvider = ({children}) => {
     useEffect(() =>{
        const unsubscribe = onAuthStateChanged(auth, (currentUser) =>{
             console.log('user inside state change', currentUser);
-            setUser(currentUser)
+            setUser(currentUser);
+            setLoading(false)
             
         });
 
@@ -39,7 +43,7 @@ const AuthProvider = ({children}) => {
 
     },[])
 
-    const authInfo = { user, providerLogin, logOut, createUser, signIn };
+    const authInfo = { user, providerLogin, logOut, createUser, signIn,loading};
 
 
     return (
