@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "therapy-care-4913b",
   storageBucket: "therapy-care-4913b.appspot.com",
   messagingSenderId: "591482121108",
-  appId: "1:591482121108:web:84535d6d8360098db5bd81"
+  appId: "1:591482121108:web:84535d6d8360098db5bd81",
 };
 
 // Initialize Firebase
