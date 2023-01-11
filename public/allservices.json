@@ -1,6 +1,5 @@
 [
   {
-    "_id": "635b5afc1dafe382a9da8c98",
     "service_id": "02",
     "title": "Hand Therapy",
     "img": "https://www.summithealth.com/sites/default/files/2021-05/Hand%20Therapy.jpg",
@@ -26,7 +25,6 @@
     ]
   },
   {
-    "_id": "635b5b691dafe382a9da8c99",
     "service_id": "03",
     "title": "LowerBackTherapy",
     "img": "https://spinalandsportscare.com.au/wp-content/uploads/2018/01/lower-back-pain-treatment.jpg",
@@ -52,7 +50,6 @@
     ]
   },
   {
-    "_id": "635b5ba51dafe382a9da8c9a",
     "service_id": "06",
     "title": "Leg Therapy",
     "img": "https://img.freepik.com/premium-photo/front-view-professional-male-masseur-with-strong-hands-massaging-calf-muscles-lower-leg_482921-2780.jpg?w=2000",
@@ -78,7 +75,6 @@
     ]
   },
   {
-    "_id": "635b5ba51dafe382a9da8c9a",
     "service_id": "07",
     "title": "Backbone Therapy",
     "img": "https://www.laspine.com/wp-content/uploads/2018/10/Physical-Therapy-After-Spine-Surgery.jpg",
@@ -104,7 +100,6 @@
     ]
   },
   {
-    "_id": "635b5ba51dafe382a9da8c9a",
     "service_id": "08",
     "title": "Neck Therapy",
     "img": "https://classicrehabilitation.com/wp-content/uploads/2021/07/Neck-Therapy-Classic-Rehab_62_63.jpg",
@@ -130,7 +125,6 @@
     ]
   },
   {
-    "_id": "635b5ba51dafe382a9da8c9a",
     "service_id": "09",
     "title": "Arm Therapy",
     "img": "https://demanddeborah.org/app/uploads/sites/2/2020/07/arm-1000x1000.jpg",
@@ -156,8 +150,7 @@
     ]
   },
   {
-    "_id": "635b5ba51dafe382a9da8c9a",
-    "service_id": "09",
+    "service_id": "10",
     "title": "Head Therapy",
     "img": "https://www.fresver.com.sg/wp-content/uploads/2020/10/HeadTherapyBanner.png",
     "price": "600",

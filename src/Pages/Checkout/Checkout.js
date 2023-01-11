@@ -20,7 +20,7 @@ const Checkout = () => {
       message,
     };
 
-    fetch("", {
+    fetch('http://localhost:5000/orders', {
       method: "POST",
       headers: {
         "content-type": "",
@@ -98,18 +98,13 @@ const Checkout = () => {
               className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-blue-600 bg-gray-100"
             ></textarea>
           </div>
-          <button
+          <button 
             type="submit"
             value="Place Your Order"
             className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ring-opacity-50 bg-blue-600 focus:ring-blue-600 hover:ring-blue-600 text-gray-50"
           >
-            Submit
+            <a href="/">Login </a>
           </button>
-          <div>
-            <button className=" btn  text-white-500">
-              <a href="/login">Login </a>
-            </button>
-          </div>
         </form>
       </section>
     </div>

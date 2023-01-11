@@ -2,13 +2,14 @@ import { data } from "autoprefixer";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
+
 const Orders = () => {
   const { user } = useContext(AuthContext);
 
   const [orders, setOrders] = useState({});
 
   useState(() => {
-    fetch(`http:/localhost:5000/orders`)
+    fetch(``)
       .then((res) => res.json())
       .then((data) => setOrders(data));
     if (data.deleteCount > 0) {
@@ -19,18 +20,17 @@ const Orders = () => {
 
   return (
     <div>
+      <h1>{orders.length}</h1>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           <thead>
             <tr>
               <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
+               
               </th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th></th>
+              <th></th>
+              <th></th>
               <th></th>
             </tr>
           </thead>
@@ -38,14 +38,14 @@ const Orders = () => {
             <tr>
               <th>
                 <label>
-                  <button className="btn btn-ghost">X</button>
+                  <button className="btn btn-ghost"></button>
                 </label>
               </th>
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img src="" alt="" />
+                    <div className="">
+                      {/* <img src="" alt="" /> */}
                     </div>
                   </div>
                 </div>
@@ -62,14 +62,7 @@ const Orders = () => {
         </table>
       </div>
 
-      {/* {
-        orders.map(order => <OrderRow
-        key={order._id}
-        order={order}
-        handleDelete={ handleDelete}
-        
-        ></OrderRow>)    
-       }  */}
+    
     </div>
   );
 };
