@@ -26,7 +26,6 @@ const Orders = () => {
           <thead>
             <tr>
               <th>
-               
               </th>
               <th></th>
               <th></th>
