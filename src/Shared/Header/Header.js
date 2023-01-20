@@ -37,9 +37,6 @@ const Header = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/servicedetails">Services Details</a>
-            </li>
-            <li>
               <a href="/blog">Blog</a>
             </li>
             <li>
@@ -72,9 +69,6 @@ const Header = () => {
         <ul className="menu menu-horizontal p-0">
           <li>
             <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/servicedetails">Services Details</a>
           </li>
           <li>
             <a href="/blog">Blog</a>
