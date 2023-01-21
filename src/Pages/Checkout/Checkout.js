@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { toast } from "react-hot-toast";
 import { FaStar } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
@@ -16,6 +17,7 @@ const Checkout = () => {
     const Orders = {
       service: _id,
       serviceName: title,
+      price,
       email,
       message,
     };
@@ -23,15 +25,17 @@ const Checkout = () => {
     fetch('http://localhost:5000/orders', {
       method: "POST",
       headers: {
-        "content-type": "",
+        "content-type": 'application/json'
       },
       body: JSON.stringify(Orders),
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then(data => {
         console.log(data);
-        if (data.acknowledged) {
+        if(data.acknowledged) {
           alert("Order successfully");
+          toast.success('Order Successfully')
+          
           form.reset();
         }
       });
@@ -91,15 +95,15 @@ const Checkout = () => {
               id="message"
               type="text"
               placeholder="Your feedback.."
-              className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-blue-600 bg-gray-100"
+              className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-blue-600 bg-gray-100" required
             ></textarea>
           </div>
           <button 
             type="submit"
             value="Place Your Order"
             className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ring-opacity-50 bg-blue-600 focus:ring-blue-600 hover:ring-blue-600 text-gray-50"
-          >
-            <a href="/orders">Login </a>
+          >Login
+         
           </button>
         </form>
       </section>

@@ -10,13 +10,7 @@ const Home = () => {
       <Services></Services>
 
       <div className=" mt-4 mb-4 flex justify-center">
-        <button
-          type="button"
-          className="px-8 py-3 font-semibold rounded-full bg-red-400 text-gray-100"
-        >
-          {" "}
-          <a href="/Servicedetails">SEE ALL SERVICES</a>
-        </button>
+       
       </div>
       <div>
         <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">

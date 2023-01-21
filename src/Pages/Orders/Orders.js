@@ -1,32 +1,45 @@
-import { data } from "autoprefixer";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
+import OrderRow from "./OrderRow";
 
 
 const Orders = () => {
   const { user } = useContext(AuthContext);
 
-  const [orders, setOrders] = useState({});
+  const [orders, setOrders] = useState([]);
 
   useState(() => {
-    fetch(``)
-      .then((res) => res.json())
-      .then((data) => setOrders(data));
-    if (data.deleteCount > 0) {
-      const remaining = orders.filter((odr) => odr._id);
-      setOrders(remaining);
+    fetch(`http://localhost:5000/orders?email=${user?.email}`)
+      .then(res => res.json())
+      .then(data => setOrders(data))
+ 
+  }, [user?.email]);
+
+  const handleDelete = id => {
+    const proceed = window.confirm("A you want to cancel this order ?");
+    if (proceed) {
+      fetch(`http:/localhost:5000/orders/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if(data.deletedCount > 0){
+            alert('deleted successfully');
+            const remaining = orders.filter(odr => odr._id !== id);
+            setOrders(remaining);
+          }
+        });
     }
-  }, []);
+  };
 
   return (
     <div>
-      <h1>{orders.length}</h1>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           <thead>
             <tr>
-              <th>
-              </th>
+              <th></th>
               <th></th>
               <th></th>
               <th></th>
@@ -34,29 +47,13 @@ const Orders = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>
-                <label>
-                  <button className="btn btn-ghost"></button>
-                </label>
-              </th>
-              <td>
-                <div className="flex items-center space-x-3">
-                  <div className="avatar">
-                    <div className="">
-                      {/* <img src="" alt="" /> */}
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <h1></h1>
-              </td>
-              <td></td>
-              <th>
-                <button className="btn btn-ghost btn-xs"></button>
-              </th>
-            </tr>
+            {
+              orders.map(order =><OrderRow
+              key={order._id}
+              order ={order}
+              handleDelete={handleDelete}
+              ></OrderRow>)
+            }
           </tbody>
         </table>
       </div>
