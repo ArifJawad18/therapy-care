@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const OrderRow = ({ order, handleDelete, handleStatusUpdate  }) => {
   const { _id, serviceName, price, email, service, status } = order;
-  const [orderService, setOrderService] = useState({});
+  const [setOrderService] = useState({});
   useEffect(() => {
     fetch(`http:/localhost:5000/services/${service}`)
       .then(res => res.json())

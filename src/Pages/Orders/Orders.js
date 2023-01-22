@@ -25,8 +25,8 @@ const Orders = () => {
         .then((data) => {
           console.log(data);
           if(data.deletedCount > 0){
-            alert('deleted successfully');
-            const remaining = orders.filter(odr => odr._id !== id);
+            alert("Deleted successfully");
+            const remaining = orders.filter((odr) => odr._id !== id);
             setOrders(remaining);
           }
         });
