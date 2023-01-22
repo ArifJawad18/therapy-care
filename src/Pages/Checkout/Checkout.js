@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { toast, Toaster } from "react-hot-toast";
 import { FaStar } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
@@ -32,7 +33,7 @@ const Checkout = () => {
       .then(data => {
         console.log(data);
         if(data.acknowledged) {
-          alert("Order successfully");
+         toast.success("Order Confirmed");
           form.reset();
         }
       });
@@ -102,6 +103,7 @@ const Checkout = () => {
           >Login
          
           </button>
+          <Toaster/>
         </form>
       </section>
     </div>

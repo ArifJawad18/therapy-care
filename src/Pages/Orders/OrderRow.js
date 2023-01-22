@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
 
 const OrderRow = ({ order, handleDelete, handleStatusUpdate  }) => {
   const { _id, serviceName, price, email, service, status } = order;
@@ -23,6 +24,7 @@ const OrderRow = ({ order, handleDelete, handleStatusUpdate  }) => {
             <th>
               
                 <button onClick={() => handleDelete(_id)} className="btn btn-warning btn-sm">Delete</button>
+                <Toaster/>
               
             </th>
             <th>

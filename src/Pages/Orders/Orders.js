@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { toast, Toaster } from "react-hot-toast";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 import OrderRow from "./OrderRow";
 
@@ -16,8 +17,7 @@ const Orders = () => {
   }, [user?.email]);
 
   const handleDelete = id => {
-    const proceed = window.confirm("A you want to cancel this order ?");
-    if (proceed) {
+   
       fetch(`http://localhost:5000/orders/${id}`, {
         method: "DELETE",
       })
@@ -25,13 +25,11 @@ const Orders = () => {
         .then((data) => {
           console.log(data);
           if(data.deletedCount > 0){
-            alert("Deleted successfully");
+            toast.success("Deleted Order Successfully");
             const remaining = orders.filter((odr) => odr._id !== id);
             setOrders(remaining);
           }
         });
-      
-    }
   }
 
   const handleStatusUpdate = id =>{
@@ -72,7 +70,9 @@ const Orders = () => {
               handleDelete={handleDelete}
               handleStatusUpdate={handleStatusUpdate}
               ></OrderRow>)
+
             }
+            <Toaster/>
           </th>
         </table>
       </div>
