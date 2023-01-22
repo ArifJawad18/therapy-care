@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { toast } from "react-hot-toast";
 import { FaStar } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
@@ -34,8 +33,6 @@ const Checkout = () => {
         console.log(data);
         if(data.acknowledged) {
           alert("Order successfully");
-          toast.success('Order Successfully')
-          
           form.reset();
         }
       });
