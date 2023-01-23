@@ -22,7 +22,7 @@ const Checkout = () => {
       message,
     };
 
-    fetch('http://localhost:5000/orders', {
+    fetch('https://therapy-care-server.vercel.app/orders', {
       method: "POST",
       headers: {
         "content-type": 'application/json'
