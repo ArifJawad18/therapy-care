@@ -22,31 +22,27 @@ const Login = () => {
         form.reset();
         setError("");
         navigate("/");
-        
+
         const currentUser = {
-          email: user.email
-          
-        }
+          email: user.email,
+        };
 
         console.log(currentUser);
 
         // get jwt token
-
-        fetch('https://therapy-care-server.vercel.app/jwt',{
-          method: 'POST',
-          headers:{
-            'content-type': 'application/json'
+        fetch("https://therapy-care-server.vercel.app/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
           },
-          body: JSON.stringify(currentUser)
+          body: JSON.stringify(currentUser),
         })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
 
-        .then(res => res.json())
-        .then(data =>{
-          console.log(data)
-
-          localStorage.setItem('therapy-careToken',data.token);
-        })
-
+            localStorage.setItem("therapycare-token", data.token);
+          });
       })
 
       .catch((error) => {
