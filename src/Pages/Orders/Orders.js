@@ -11,8 +11,8 @@ const Orders = () => {
 
   useState(() => {
     fetch(`https://therapy-care-server.vercel.app/orders?email=${user?.email}`)
-      .then(res => res.json())
-      .then(data => setOrders(data))
+      // .then(res => res.json())
+      // .then(data => setOrders(data))
  
   }, [user?.email]);
 
