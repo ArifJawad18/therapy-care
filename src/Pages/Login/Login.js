@@ -21,7 +21,7 @@ const Login = () => {
         console.log(user);
         form.reset();
         setError("");
-        navigate("/orders");
+        navigate("/");
         
         const currentUser = {
           email: user.email
