@@ -19,7 +19,7 @@ const Orders = () => {
     )
       .then((res) => {
         if (res.status === 401 || res.status === 403) {
-          signOut();
+          return signOut();
         }
 
         return res.json();
@@ -28,7 +28,7 @@ const Orders = () => {
         console.log("receive", data);
         setOrders(data);
       });
-  }, [user?.email]);
+  }, [user?.email, signOut]);
 
   const handleDelete = (id) => {
     fetch(`https://therapy-care-server.vercel.app/orders/${id}`, {
