@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Error from "../../Error/Error";
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Checkout from "../../Pages/Checkout/Checkout";
@@ -48,9 +49,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: (
-          <div className="text-center text-red-500">
-            Sorry, we couldn't find this page.
+          <div >
+            <Error></Error>
           </div>
+         
         ),
       },
     ],
